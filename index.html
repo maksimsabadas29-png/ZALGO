@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZALGO — Text Corruption Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">ZAL<span>GO</span></a>
+        <div class="header-label">THE CORRUPTED TEXT GENERATOR</div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="tag">✦ ENTER THE UNKNOWN ✦</div>
+            <h1>Звичайний текст.<br><span>Незвичайний жах.</span></h1>
+            <p>Перетвори звичайні слова на щось незрозуміле та моторошне.</p>
+        </section>
+
+        <section class="generator">
+
+            <div class="panel input-panel">
+                <h2>Твій текст</h2>
+                <p class="subtitle">Введи слова, які хочеш спотворити.</p>
+
+                <textarea id="inputText" placeholder="Напиши щось тут..."></textarea>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="fontSelect">Шрифт</label>
+                        <select id="fontSelect">
+                            <option value="Arial">Arial</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Gothic">Gothic</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="horrorLevel">Рівень жаху</label>
+                        <select id="horrorLevel">
+                            <option value="1">Легкий</option>
+                            <option value="2" selected>Середній</option>
+                            <option value="3">Екстремальний</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h3>Розташування спотворень</h3>
+
+                <div class="slider-group">
+                    <div class="slider-heading">
+                        <label for="topLevel">Верх тексту</label>
+                        <span id="topValue">50%</span>
+                    </div>
+                    <input type="range" id="topLevel" min="0" max="100" value="50">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-heading">
+                        <label for="middleLevel">Середина тексту</label>
+                        <span id="middleValue">50%</span>
+                    </div>
+                    <input type="range" id="middleLevel" min="0" max="100" value="50">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-heading">
+                        <label for="bottomLevel">Низ тексту</label>
+                        <span id="bottomValue">50%</span>
+                    </div>
+                    <input type="range" id="bottomLevel" min="0" max="100" value="50">
+                </div>
+
+                <button class="generate-btn" id="generateBtn">
+                    ✦ СПОТВОРИТИ ТЕКСТ
+                </button>
+            </div>
+
+            <div class="panel output-panel">
+                <div class="output-heading">
+                    <div>
+                        <h2>Результат</h2>
+                        <p class="subtitle">Твій текст після спотворення.</p>
+                    </div>
+                    <span class="live-label">● LIVE</span>
+                </div>
+
+                <div class="output-box" id="outputText">
+                    <span class="placeholder">Тут з'явиться твій Zalgo-текст...</span>
+                </div>
+
+                <div class="output-buttons">
+                    <button id="copyBtn" class="copy-btn">КОПІЮВАТИ</button>
+                    <button id="clearBtn" class="clear-btn">ОЧИСТИТИ</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="info">
+            <div class="tag">✦ ABOUT ZALGO ✦</div>
+            <h2>Текст виходить за <span>межі звичайного.</span></h2>
+            <p>Zalgo використовує спеціальні символи Unicode, які можуть
+               розташовуватися над, посередині та під літерами.</p>
+        </section>
+
+        <footer>
+            <div class="footer-logo">ZALGO</div>
+            <p>WELCOME TO THE CORRUPTED WORLD.</p>
+            <span>© 2026 ZALGO TEXT GENERATOR</span>
+        </footer>
+
+    </main>
+
+    <div class="toast" id="toast">Скопійовано!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
